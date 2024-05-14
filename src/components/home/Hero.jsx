@@ -1,13 +1,14 @@
-import PropTypes from 'prop-types'
 import PrimaryButon from '../Buton'
 import img1 from "../../assets/heroImg/img1.png"
 import img2 from "../../assets/heroImg/img2.png"
+import img3 from "../../assets/heroImg/tea.gif"
 import img4 from "../../assets/heroImg/img4.png"
 import img5 from "../../assets/heroImg/img5.png"
+import design from "../../assets/heroImg/design.png"
 
-const Hero = props => {
+const Hero = ()=> {
   return (
-    <div className='px-5 md:px-10 '>
+    <div className='px-5 md:px-10 overflow-y-hidden'>
       <section className='flex flex-col gap-5 lg:flex-row items-center justify-center lg:gap-20 py-8 md:py-12 lg:pt-20 lg:pb-[61px]'>
         <div>
         <h1 className=' text-grey-300 text-xl md:text-2xl lg:text-[clamp(24px,2.08vw,30px)] pb-4 md:pb-8'>
@@ -20,25 +21,22 @@ const Hero = props => {
         </div>
         <PrimaryButon text="Get Involved"/>
       </section>
-      <section>
-        <div>
-            <img src={img1} alt="" />
-            <img src={img2} alt="" />
+      <section className='md:grid md:grid-cols-4 md:gap-7 lg:px-[clamp(150px,13.611vw,196px)] bg-black'>
+        <div className='hidden md:col-start-1 md:col-end-2 md:grid  '>
+            <img src={img1} alt="" className='lg:w-[17.98vw] md:h-[18.98vw] object-cover rounded-md'  />
+            <img src={img2} alt="" className='lg:w-[17.98vw] md:h-[18.98vw] object-cover rounded-md' />
         </div>
-        <div>
-            <img src="" alt="" />
+        <div className='md:col-start-2 md:col-end-4 relative'>
+            <img src={img3} alt="alty" className='w-full lg:w-[36.7vw]' />
+            <img src={design} alt="" className='w-24 lg:w-fit left-[-20px] absolute bottom-0 lg:left-[-120px]' />
         </div>
-        <div>
-            <img src={img4} alt="" />
-            <img src={img5} alt="" />
+        <div className='md:col-start-4 md:col-end-5 hidden md:grid '>
+            <img src={img4} alt="" className='lg:w-[17.98vw] md:h-[18.98vw] object-cover rounded-md hidden md:block' />
+            <img src={img5} alt="" className='lg:w-[17.98vw] md:h-[18.98vw] object-cover rounded-md hidden md:block'/>
         </div>
       </section>
     </div>
   )
-}
-
-Hero.propTypes = {
-
 }
 
 export default Hero

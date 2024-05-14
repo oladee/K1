@@ -10,14 +10,21 @@ export default {
         cream : "#FFECD8",
         brown : "#C49A6C",
         grey : {
+          50 : '#F9FAFB',
+          100 : '#F0F2F5',
+          200 : '#E4E7EC',
           300 : '#D0D5DD'
-        }
+        },
+        cardColor :  '#161616'
       },
       fontFamily : {
         inter : ['Inter', 'sans-serif;'],
         SansationLight : ['SansationLight'],
         SansationRegular : ['SansationRegular'],
         SansationBold : ['SansationBold']
+      },
+      backgroundImage : {
+        design : "url('./src/assets/heroImg/design.png')"
       }
     },
   },

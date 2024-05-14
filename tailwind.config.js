@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       colors : {
-        cream : "#FFECD8;"
+        cream : "#FFECD8",
+        brown : "#C49A6C",
+        grey : {
+          300 : '#D0D5DD'
+        }
       },
       fontFamily : {
         inter : ['Inter', 'sans-serif;'],

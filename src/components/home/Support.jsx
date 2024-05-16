@@ -4,7 +4,7 @@ import { support } from '../../constants'
 
 const Support = () => {
   return (
-    <div className='px-5 md:px-10 lg:px-20'>
+    <div className='px-5 md:px-10 lg:px-20 py-20 md:py-40 lg:py-[213px]'>
       <h2 className='text-grey-100 text-center font-SansationBold text-3xl md:text-5xl text-[clamp(45px,5.55vw,80px)] pb-10 md:pb-14 lg:pb-20'>
       Your support <span className='text-brown'>matters</span> 
       </h2>

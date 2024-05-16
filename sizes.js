@@ -7,6 +7,8 @@
 
 // 32px clamp(24px,2.285vw,32px)
 
+// 40px clamp(30px,2.77vw,40px)
+
 // 57px clamp(45px,3.95vw,57px)
 
 // 64px clamp(45px,4.44vw,64px)

@@ -7,7 +7,7 @@ const Card = ({logo, heading, body, cta}) => {
   return (
     <div className={`bg-cardColor rounded-md p-10 py-14 lg:pl-14 lg:w-[28.5vw]`}>
         <img src={logo} alt="" className='pb-7 lg:pb-11' />
-        <h2 className="text-[clamp(24px,2.285vw,32px)] text-grey-100 pb-3 lg:pb-6 font-SansationBold text-balance w-[18vw]">
+        <h2 className="text-[clamp(24px,2.285vw,32px)] text-grey-100 pb-3 lg:pb-6 font-SansationBold text-balance lg:w-[18vw]">
             {heading}
         </h2>
         <p className="text-xl lg:text-[clamp(18px,1.6vw,24px)] text-grey-300 font-SansationLight pb-6 md:pb-[40px] lg:pb-12 text-balance ">

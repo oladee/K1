@@ -24,7 +24,13 @@ export default {
         SansationBold : ['SansationBold']
       },
       backgroundImage : {
-        design : "url('./src/assets/heroImg/design.png')"
+        design : "url('./src/assets/heroImg/design.png')",
+        profit : "url('./src/assets/about/profit.png')"
+      },
+      keyframes : {
+        scrollWatcher : {
+          to : {scale : '1 1'}
+        }
       }
     },
   },

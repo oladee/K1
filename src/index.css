@@ -24,3 +24,27 @@
   }
   
 }
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 30;
+  transition: all 1.5s ease-in-out;
+}
+
+@keyframes scrollWatcher {
+  to {scale: 1 1;}
+}
+.scrollWatcher{
+  display: block;
+  height: 5px;
+  margin-top: 5px 0;
+  background-color: #C49A6C;
+  scale: .5 1;
+  transform-origin: left;
+  animation: scrollWatcher linear;
+  animation-timeline: scroll();
+  z-index: 1000;
+}

@@ -4,7 +4,7 @@ import arrow from "../../assets/arrow.png"
 
 const Vision = () => {
   return (
-    <div>
+    <div className="bg-black">
       <section  className='flex flex-col lg:flex-row justify-center px-5 md:px-10 gap-8 md:gap-12 lg:gap-32 py-14 md:py-20 lg:py-40 md:pb-[150px] lg:pb-[270px]'>
       <h1 className='text-[clamp(45px,4.44vw,64px)] font-SansationBold text-grey-50'>
       Our <br /> Vision

@@ -79,3 +79,22 @@ export const support = [
 export const images = [
     icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13, icon14, icon15, icon16, icon17, icon18, icon19, icon20, icon21, icon22, icon23
 ]
+
+export const source  = [
+    {
+        heading : 'Grants',
+        text : 'Pursue funding from governmental bodies, philanthropic organizations, and cultural foundations committed to music and cultural preservation'
+    },
+    {
+        heading : 'Donations',
+        text : 'Welcome contributions from individuals, corporations, and music enthusiasts dedicated to advancing Yoruba cultural music and talent development.'
+    },
+    {
+        heading : 'Fundraising Events',
+        text : "Host concerts, cultural festivals, and other engaging events to generate funds and elevate awareness of our foundation's mission"
+    },
+    {
+        heading : 'Corporate Partnerships',
+        text : "Establish strategic alliances with companies sharing our values and goals, leveraging their resources and networks to amplify our fundraising efforts."
+    },
+]

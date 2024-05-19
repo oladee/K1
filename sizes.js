@@ -1,13 +1,15 @@
 
 // font sizes 1440
 
-// 24px  text-xl clamp(18px,1.66vw,24px)
+// 24px  text-lg clamp(18px,1.66vw,24px)
 
 // 30px clamp(24px,2.08vw,30px)
 
 // 32px clamp(24px,2.285vw,32px)
 
-// 40px clamp(30px,2.77vw,40px)
+// 40px text-xl md:text-2xl clamp(30px,2.77vw,40px)
+
+// 48px text-2xl md:text-3xl clamp(30px,3.33vw,48px)
 
 // 57px clamp(45px,3.95vw,57px)
 

@@ -27,6 +27,7 @@ const Navbar = () => {
     const ham = document.getElementById('ham')
     const mobby = document.getElementById('mobby')
     const ul = document.querySelector('#mobby .ul')
+    const closeIcon = document.querySelector('#closeIcon')
     const showSideBar = ()=>{
       mobby.classList.add('open')
       mobby.style.animation = "mymove 1s 1"
@@ -43,21 +44,35 @@ const Navbar = () => {
       e.stopPropagation()
       mobby.classList.remove('open')
     }
+
+    const closeMobby = ()=>{
+      mobby.style.animation = "mymoveopposite 1s 1"
+      setTimeout(()=>{
+        mobby.classList.remove('open')
+      },1000)
+    }
     ham.addEventListener('click',showSideBar)
     ul.addEventListener('click',stopUlpropagation)
     mobby.addEventListener('click',mobbyClose)
+    closeIcon.addEventListener('click', closeMobby)
+    return ()=>{
+      ham.removeEventListener('click',showSideBar);
+      ul.removeEventListener('click',stopUlpropagation)
+      mobby.removeEventListener('click',mobbyClose)
+    closeIcon.removeEventListener('click', closeMobby)
+  }
   })
 
   return (
     <div className=" p-5 md:py-5 md:px-10 lg:px-20" id="nav">
       <div className="flex justify-between items-center lg:w-full">
-      <div>
+      <NavLink to="/">
         <img src={logo} alt="" />
-      </div>
+      </NavLink>
       <nav className="hidden lg:flex lg:justify-between lg:items-center" id="mobby">
         <div className="text-white lg:flex lg:items-center lg:gap-16 ul">
           <div className="flex justify-end">
-            <img src={closeIcon} alt="close icon" className="lg:hidden w-14" />
+            <img src={closeIcon} alt="close icon" className="lg:hidden w-14" id="closeIcon" />
           </div>
           <NavLink to="/">
               Home

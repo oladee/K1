@@ -5,6 +5,7 @@ import ham from "../assets/hammenu.svg"
 import { useEffect} from "react"
 import closeIcon from "../assets/close.svg"
 const Navbar = () => {
+  // const [mobileMenu, setMobileMenu] = useState(false)
   
   useEffect(()=>{
     const nav = document.getElementById('nav')
@@ -43,10 +44,12 @@ const Navbar = () => {
     const mobbyClose = (e)=>{
       e.stopPropagation()
       mobby.classList.remove('open')
+      document.body.classList.remove('bodyStiff')
     }
 
     const closeMobby = ()=>{
       mobby.style.animation = "mymoveopposite 1s 1"
+      document.body.classList.remove('bodyStiff')
       setTimeout(()=>{
         mobby.classList.remove('open')
       },1000)
@@ -55,12 +58,12 @@ const Navbar = () => {
     ul.addEventListener('click',stopUlpropagation)
     mobby.addEventListener('click',mobbyClose)
     closeIcon.addEventListener('click', closeMobby)
-    return ()=>{
-      ham.removeEventListener('click',showSideBar);
-      ul.removeEventListener('click',stopUlpropagation)
-      mobby.removeEventListener('click',mobbyClose)
-    closeIcon.removeEventListener('click', closeMobby)
-  }
+  //   return ()=>{
+  //     ham.removeEventListener('click',showSideBar);
+  //     ul.removeEventListener('click',stopUlpropagation)
+  //     mobby.removeEventListener('click',mobbyClose)
+  //   closeIcon.removeEventListener('click', closeMobby)
+  // }
   })
 
   return (

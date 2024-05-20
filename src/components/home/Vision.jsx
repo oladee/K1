@@ -1,10 +1,38 @@
 import { Link } from "react-router-dom"
 import ayinde from "../../assets/ayinde.png"
 import arrow from "../../assets/arrow.png"
+import { useEffect, useRef, useState} from "react"
+import legacy from "../../assets/Legacy.mp3"
+import play from "../../assets/play.png"
+import pause from "../../assets/pause.png"
 
 const Vision = () => {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef(null)
+  useEffect(()=>{
+    function end(){
+      setIsPlaying(false)
+    }
+    const audio = document.getElementById('audio')
+    audio.addEventListener('ended',end)
+  })
+
+  function handleMusicPlaying (e){
+    e.stopPropagation()
+    setIsPlaying(!isPlaying)
+    if(audioRef.current.ended){
+      audioRef.current.play()
+    }
+    else if(audioRef.current.paused){
+      audioRef.current.play()
+    }else{
+      audioRef.current.pause()
+    }
+  }
+
   return (
     <div className="bg-black">
+      <audio src={legacy} ref={audioRef} id="audio" ></audio>
       <section  className='flex flex-col lg:flex-row justify-center px-5 md:px-10 gap-8 md:gap-12 lg:gap-32 py-14 md:py-20 lg:py-40 md:pb-[150px] lg:pb-[270px]'>
       <h1 className='text-[clamp(45px,4.44vw,64px)] font-SansationBold text-grey-50'>
       Our <br /> Vision
@@ -15,14 +43,16 @@ const Vision = () => {
       </section>
       <section className="lg:flex justify-end relative px-5 md:px-28 lg:px-60">
         <div className="lg:absolute left-36 top-[-45px] bg-brown w-fit mb-6">
-            <img src={ayinde} alt="" className="lg:w-[30.69vw]" />
+            <div className="relative">
+              <img src={ayinde} alt="" className="lg:w-[30.69vw]" id="ayinde" />
+              <div className="absolute inset-0 opacity-55 lg:opacity-45 lg:hover:opacity-75 bg-[rgba(0,0,0)] cursor-pointer transition-all duration-700 flex items-center justify-center">
+                <img src={isPlaying ? pause  : play} alt="" onClick={handleMusicPlaying} className="transition-all duration-700" />
+              </div>
+            </div>
         </div>
         <div className="py-8 lg:pt-16 lg:pb-12 px-5 md:px-11 lg:pl-14 lg:pr-8 bg-[#161616] md:w-[80vw] lg:w-[42.157vw] lg:max-w-[607px]">
             <h2 className="text-[clamp(24px,2.285vw,32px)] text-grey-300 pb-6 font-SansationBold">
-            Olasunkanmi Ayinde <br /> Marshall
-            <span className="text-brown">
-            (K1 De Ultimate)
-            </span>
+            Olasunkanmi Ayinde <br /> Marshall <span className="text-brown"> (K1 De Ultimate)</span>
             </h2>
             <p className="text-xl lg:text-[clamp(18px,1.66vw,24px)] text-grey-100 font-SansationLight pb-6 md:pb-9 lg:pb-12 ">
             My inspiration for this endeavor springs from a deep love for our musical heritage. Travelling the world, I&lsquo;ve seen how Yoruba music unites hearts and crosses boundaries.  But I also felt a responsibility to preserve and nurture this legacy. Thus, this foundation was born - a vision to celebrate our musical tapestry, empower talents, and foster cultur...

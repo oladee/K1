@@ -9,7 +9,7 @@ import design from "../../assets/heroImg/design.png"
 const Hero = ()=> {
   return (
     <div className='px-5 md:px-10 overflow-y-hidden'>
-      <section className='flex flex-col gap-5 lg:flex-row items-center justify-center lg:gap-20 py-8 md:py-12 lg:pt-20 lg:pb-[61px]'>
+      <section className='flex flex-col gap-5 lg:flex-row items-start lg:items-center justify-center lg:gap-20 py-8 md:py-12 lg:pt-20 lg:pb-[61px]'>
         <div>
         <h1 className=' text-grey-300 text-xl md:text-2xl lg:text-[clamp(24px,2.08vw,30px)] pb-4 md:pb-8'>
         Welcome to K1 De Ultimate Music Foundation
@@ -26,7 +26,7 @@ const Hero = ()=> {
             <img src={img1} alt="" className='lg:w-[17.98vw] md:h-[18.98vw] object-cover rounded-md'  />
             <img src={img2} alt="" className='lg:w-[17.98vw] md:h-[18.98vw] object-cover rounded-md' />
         </div>
-        <div className='md:col-start-2 md:col-end-4 relative'>
+        <div className='md:col-start-2 md:col-end-4 relative' id='nity'>
             <img src={img3} alt="alty" className='w-full lg:w-[36.7vw]' />
             <img src={design} alt="" className='w-24 lg:w-fit left-[-20px] absolute bottom-0 lg:left-[-120px]' />
         </div>

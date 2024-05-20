@@ -8,9 +8,6 @@ import Support from "../components/home/Support"
 import Footer from "../components/Footer"
 
 const Home = () => {
-  useEffect(()=>{
-
-  })
   return (
     <div className="bg-black">
       <Navbar/>
